@@ -17,6 +17,7 @@ params = {
   category: "SBIK",
   'location.country' => "USA",
   retvals: "location,external_url,heading,body,timestamp,price,images,annotations"
+ 
 }
 
 # Prepare API request 
@@ -27,13 +28,33 @@ uri.query = URI.encode_www_form(params)
 result = JSON.parse(open(uri).read)
 
 # Display results to screen (put string - display information)
-puts JSON.pretty_generate result
+#puts result["postings"].second["location"]
+
+#store results in database
 
 
+
+    # Create new Post
+   result["postings"].each do |posting|
+
+      # Create new Post
+      @post = Post.new
+      @post.heading = posting["heading"]
+      @post.body = posting["body"]
+      @post.price = posting["price"]
+      @post.state = posting["location"]["locality"]
+      @post.external_url = posting["external_url"]
+      @post.timestamp = posting["timestamp"]
+
+      # Save Post
+
+
+    # Save Post
+    @post.save
+    end
   end
 
   desc "TODO"
   task destroy_all_posts: :environment do
   end
-
 end
