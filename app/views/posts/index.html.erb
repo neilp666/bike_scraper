@@ -1,35 +1,28 @@
-<h1>Listing posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Heading</th>
-      <th>Body</th>
-      <th>Price</th>
-      <th>State</th>
-      <th>External url</th>
-      <th>Timestamp</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
+<div class="container">
+  <table class="table table-hover table-condensed">
+    <thead>
       <tr>
-        <td><%= post.heading %></td>
-        <td><%= post.body %></td>
-        <td><%= post.price %></td>
-        <td><%= post.state %></td>
-        <td><%= post.external_url %></td>
-        <td><%= post.timestamp %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Heading</th>
+        <th>Price</th>
+        <th>State</th>
+        <th>Last Updated</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= link_to post.heading, post %></td>
+          <td><%= number_to_currency(post.price, precision: 0) %></td>
+          <td><%= post.state %></td>
+          <td><%= "#{time_ago_in_words(Time.at(post.timestamp.to_i))} ago" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Post', new_post_path %>
+  <br>
+
+  <%= link_to 'New Post', new_post_path %>
+
+</div>
