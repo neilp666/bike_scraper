@@ -28,16 +28,15 @@ uri.query = URI.encode_www_form(params)
 result = JSON.parse(open(uri).read)
 
 # Display results to screen (put string - display information)
-#puts result["postings"].second["location"]
-
-#store results in database
-
+#puts result["postings"].third["annotations"]["source_state"]
+#puts result["postings"].second["images"].second["full"]
 
 
-    # Create new Post
+# store results in database
+
    result["postings"].each do |posting|
 
-      # Create new Post
+      #Create new Post
       @post = Post.new
       @post.heading = posting["heading"]
       @post.body = posting["body"]
@@ -46,15 +45,23 @@ result = JSON.parse(open(uri).read)
       @post.external_url = posting["external_url"]
       @post.timestamp = posting["timestamp"]
 
-      # Save Post
-
 
     # Save Post
     @post.save
-    end
-  end
 
-  desc "TODO"
+    # loop over images and save to image database
+    posting["images"].each do |image|
+      @image = Image.new
+      @image.url = image["full"]
+      @image.post_id = @post_id
+      @image.save
+    end
+   end
+end
+
+  desc "Destroy all postig data"
   task destroy_all_posts: :environment do
+    Post.destroy_all
   end
 end
+
