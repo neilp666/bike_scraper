@@ -32,7 +32,7 @@
   <%= @post.timestamp %>
 </p>
 
-<%= @images.each do |image| %>
+<% @images.each do |image| %>
   <%= image_tag image.url, class: "thumbnail" %>
 <% end %>
 
