@@ -41,7 +41,7 @@ result = JSON.parse(open(uri).read)
       @post.heading = posting["heading"]
       @post.body = posting["body"]
       @post.price = posting["price"]
-      @post.state = posting["location"]["state"]
+      @post.state = Location.find_by(code: posting["location"]["state"]).try(:name)
       @post.external_url = posting["external_url"]
       @post.timestamp = posting["timestamp"]
 
