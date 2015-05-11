@@ -1,4 +1,18 @@
 <div class="container">
+  <div class="filter">
+    <%= form_tag posts_path, method: :get do %>
+      <%= label_tag :state %>
+      <%= text_field_tag :state, params[:state] %>
+
+      <%= label_tag :price %>
+      <%= text_field_tag :price, params["price"] %>
+
+      <%= submit_tag "Search", name: nil %>
+
+    <% end %>
+  </div>
+
+
   <table class="table table-hover table-condensed">
     <thead>
       <tr>
