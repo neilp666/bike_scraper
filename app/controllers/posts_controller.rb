@@ -3,6 +3,11 @@ class PostsController < ApplicationController
 
   # GET /posts
   # GET /posts.json
+
+  def home 
+  end
+
+  
   def index
     @posts = Post.all.paginate(:page => params[:page], :per_page => 30)
     @posts = @posts.where(state: params[:state]) if params["state"].present?

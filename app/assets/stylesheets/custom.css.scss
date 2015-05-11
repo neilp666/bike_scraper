@@ -1,2 +1,38 @@
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: url('bike.jpg');
+  height: 800px;
+  background-position: center;
+  background-size: cover;
+ 
+
+  h1 {
+    font-family: 'Pacifico', arial;
+    text-transform: uppercase;
+     color: #fff;
+    text-shadow: 0px 2px 3px #555;
+  }
+
+  h2 {
+    color: #fff;
+    text-shadow: 0px 2px 3px #555;
+    margin-bottom: 80px;
+  }
+.container {
+  padding: 80px 0px;
+}
+
+.filter {
+  background-color: rgba(215,226,241,0.9);
+  padding: 20px 50px 10px 10px;
+  border-radius: 10px;
+  }
+}
