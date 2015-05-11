@@ -6,7 +6,8 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.paginate(:page => params[:page], :per_page => 30)
     @posts = @posts.where(state: params[:state]) if params["state"].present?
-    @posts = @posts.where(price: params[:price]) if params["price"].present?
+    @posts = @posts.where("price > ?", params["min_price"]) if params["min_price"].present?
+    @posts = @posts.where("price < ?", params["max_price"]) if params["max_price"].present?
   end
 
   # GET /posts/1

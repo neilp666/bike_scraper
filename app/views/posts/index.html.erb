@@ -2,10 +2,13 @@
   <div class="filter">
     <%= form_tag posts_path, method: :get do %>
       <%= label_tag :state %>
-      <%= text_field_tag :state, params[:state] %>
+      <%= select_tag(:state, options_from_collection_for_select(Location.all, :name, :name, params[:state]), { include_blank: true }) %>
 
-      <%= label_tag :price %>
-      <%= text_field_tag :price, params["price"] %>
+      <%= label_tag :min_price %>
+      <%= text_field_tag :min_price, params[:min_price] %>
+
+      <%= label_tag :max_price %>
+      <%= text_field_tag :max_price, params[:max_price] %>
 
       <%= submit_tag "Search", name: nil %>
 
