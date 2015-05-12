@@ -1,41 +1,36 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
+  <div class="header">
+    <h3>
+      <%= @post.heading %>
+    </h3>
+    <p>
+      <%= link_to @post.external_url, @post.external_url %>
+    </p>
+  </div>
 
-<p>
-  <strong>Heading:</strong>
-  <%= @post.heading %>
-</p>
+<div class="row">
+  <div class="col-md-7">
+    <% @images.each do |image| %>
+    <%= image_tag image.url, class: "thumbnail" %>
+  <% end %>
+</div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+  <div class="col-md-5">
+    Price: <%= number_to_currency(@post.price, precision: 0) %><br>
+    Last Updated: <%= "#{time_ago_in_words(Time.at(@post.timestamp.to_i))} ago" %><br>
+    
+    <% if @post.state.present? %>
+        State: <%= @post.state %><br>
+    <% end %>
 
-<p>
-  <strong>Price:</strong>
-  <%= @post.price %>
-</p>
+  <p>
+    <%= @post.body %>
+  </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @post.state %>
-</p>
 
-<p>
-  <strong>External url:</strong>
-  <%= @post.external_url %>
-</p>
-
-<p>
-  <strong>Timestamp:</strong>
-  <%= @post.timestamp %>
-</p>
-
-<% @images.each do |image| %>
-  <%= image_tag image.url, class: "thumbnail" %>
-<% end %>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+</div>
+  </div>
 </div>
