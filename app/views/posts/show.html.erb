@@ -11,26 +11,38 @@
   </div>
 
 <div class="row">
-  <div class="col-md-7">
-    <% @images.each do |image| %>
-    <%= image_tag image.url, class: "thumbnail" %>
+  <div class="col-md-7" id="post-images">
+    <% if @images.blank? %>
+      <%= image_tag "No_Image_Available_20.jpg", class: "thumbnail" %>
+    <% else %>
+      <% @images.each do |image| %>
+        <%= image_tag image.url, class: "thumbnail" %>
+    <% end %>
   <% end %>
 </div>
 
   <div class="col-md-5">
-    Price: <%= number_to_currency(@post.price, precision: 0) %><br>
-    Last Updated: <%= "#{time_ago_in_words(Time.at(@post.timestamp.to_i))} ago" %><br>
-    
-    <% if @post.state.present? %>
-        State: <%= @post.state %><br>
-    <% end %>
+    <div class="basic-info">
+      <h4>Basic Info</h4>
+        Price: <%= number_to_currency(@post.price, precision: 0) %><br>
+        Last Updated: <%= "#{time_ago_in_words(Time.at(@post.timestamp.to_i))} ago" %><br>
+        
+        <% if @post.state.present? %>
+            State: <%= @post.state %><br>
+        <% end %>
+      </div>
 
-  <p>
-    <%= @post.body %>
-  </p>
+      <div class="description">
+      <h4>Description</h4>
+
+        <p>
+          <%= @post.body %>
+        </p>
+      </div>
 
 
-<%= link_to 'Back', posts_path %>
-</div>
+
+        <%= link_to 'Back', posts_path %>
+    </div>
   </div>
 </div>

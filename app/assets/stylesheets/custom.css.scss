@@ -51,3 +51,24 @@ body {
       margin-bottom: 0px;
     }
   }
+
+  .basic-info, .description {
+    background-color: #d7e2f3;
+    border: 2px solid #bacde6;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 30px 0px;
+
+  }
+
+  #post-images {
+    border-right: 2px dotted #e3e3e3;
+    padding: 20px;
+    .thumbnail {
+      max-width: 100%;
+    }
+  }
+
+  .header {
+    border-bottom: 2px dotted #e3e3e3;
+  }
