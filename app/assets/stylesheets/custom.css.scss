@@ -14,19 +14,16 @@ body {
 
 .jumbotron {
  
-  
   background-image: url('https://dl.dropboxusercontent.com/s/8nappil0qbbgnq8/bike.jpg');
   height: 800px;
   background-size: cover;
   background-position: center;
-
-
  
   
   h1 {
     font-family: 'Pacifico', arial;
     text-transform: uppercase;
-     color: yellow;
+    color: yellow;
     text-shadow: 0px 2px 3px #555;
   }
 
@@ -65,9 +62,11 @@ body {
   background-color: rgba(0,0,0,0.7);
   text-align: center;
   border-radius: 30px;
+
   }
 
   .basic-info, .description {
+
     background-color: #d7e2f3;
     border: 2px solid #bacde6;
     border-radius: 5px;
@@ -87,3 +86,65 @@ body {
   .header {
     border-bottom: 2px dotted #e3e3e3;
   }
+
+footer {
+   background-color: #F5F5F1;
+  }
+
+
+/* Responsive Styling */
+
+/* Responsive Styling */
+
+@media (max-width: 424px) { 
+
+  .jumbotron h1 {
+    font-size: 55px;
+  }
+
+  .jumbotron h2 {
+    font-size: 12px
+  }
+.jumbotron p {
+    font-size: 20px
+  }
+
+  .box {
+  width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  background: black;
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+  border-radius: 30px;
+
+  }
+}
+
+
+
+@media (max-width: 424px) { 
+
+  .jumbotron h1 {
+    font-size: 55px;
+  }
+
+  .jumbotron h2 {
+    font-size: 12px
+  }
+.jumbotron p {
+    font-size: 20px
+  }
+
+  .box {
+  width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  background: black;
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+  border-radius: 30px;
+
+  }
+}
+
