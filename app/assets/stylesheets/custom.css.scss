@@ -4,41 +4,46 @@
 @import "bootstrap";
 
 body {
-    background-color: #F5F5F1;
-}
+  background-color: #F5F5F1;
+  }
+
 
 .center {
   text-align: center;
 }
 
 .jumbotron {
-  background-image: url('bike.jpg');
-  height: 800px;
-  background-position: center;
-  background-size: cover;
  
+  
+  background-image: url('https://dl.dropboxusercontent.com/s/8nappil0qbbgnq8/bike.jpg');
+  height: 800px;
+  background-size: cover;
+  background-position: center;
 
+
+ 
+  
   h1 {
     font-family: 'Pacifico', arial;
     text-transform: uppercase;
-     color: #fff;
+     color: yellow;
     text-shadow: 0px 2px 3px #555;
   }
 
   h2 {
-    color: #fff;
-    text-shadow: 0px 2px 3px #555;
-    margin-bottom: 80px;
+    font-family: 'Helvetica Neue', Helvetica;
+    color: yellow;
   }
-.container {
-  padding: 80px 0px;
-}
+
+  p {
+
+    font-family: 'Helvetica Neue', Helvetica;
+    font-size: 20px;
+    color: #fff;
+
+  }
 
 }
-.filter {
-  padding: 20px 50px 10px 10px;
-  border-radius: 10px;
-  }
 
   .table-hover tbody tr:hover {
     background-color: #eaeae2;
@@ -50,6 +55,16 @@ body {
       height: 100%;
       margin-bottom: 0px;
     }
+  }
+
+  .box {
+  width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background: black;
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+  border-radius: 30px;
   }
 
   .basic-info, .description {
