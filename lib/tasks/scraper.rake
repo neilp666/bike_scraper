@@ -111,6 +111,15 @@ result["locations"].each do |location|
 end
 end
 
+desc "Discard old data"
+task discard_old_data: :environment do
+  Post.all.each do |post|
+    if post.created_at = 4.hours.ago
+      post.destroy
+    end
+  end
+end
+
 
 
 
