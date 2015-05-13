@@ -78,7 +78,7 @@ end
 desc "Save neighborhood codes in a reference table"
 task scrape_neighborhoods: :environment do
   require 'open-uri' #ruby gem 
-  require 'JSON'
+  require 'json'
 
 # Set API token and URL 
 auth_token = "fa9504f4383a477d56f4a23a1cc86e0d"
