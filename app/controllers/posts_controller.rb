@@ -7,6 +7,9 @@ class PostsController < ApplicationController
   def home 
   end
 
+  def about
+  end
+
   
   def index
     @posts = Post.order('timestamp DESC').paginate(:page => params[:page], :per_page => 30)
