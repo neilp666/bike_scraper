@@ -30,6 +30,8 @@ body {
   h2 {
     font-family: 'Helvetica Neue', Helvetica;
     color: yellow;
+    font-weight: 80;
+
   }
 
   p {
@@ -103,10 +105,10 @@ footer {
   }
 
   .jumbotron h2 {
-    font-size: 12px
+    font-size: 22px
   }
 .jumbotron p {
-    font-size: 20px
+    font-size: 28px
   }
 
   .box {
@@ -146,5 +148,29 @@ footer {
   border-radius: 30px;
 
   }
+}
+
+
+
+img {
+    max-width: 110%;
+    height: auto;      
+}
+
+.clearfix {
+    clear:both;
+}
+
+.rowcolor {
+    background-color:#CCCCCC;
+}
+
+.padall {
+    padding:10px;
+}
+
+.icon {
+    font-size:23px;
+    color:#197BB5;
 }
 

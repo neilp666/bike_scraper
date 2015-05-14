@@ -1,45 +1,56 @@
 <div class="container">
   <%= render 'filter' %>
+      <div class="row">
 
-  <% if @posts.empty? %>
-  <hr>
-  <h3>No results found</h3>
-  <% else %>
+        <% if @posts.empty? %>
+          <hr>
+            <h3>Sorry No results found In this State!</h3>
+              <p>Please Try Again!</p>
+         <% else %>
 
 
+          <tbody>
+            <% @posts.each do |post| %>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+                  <div class="panel panel-default">
+                      <div class="row padall">
+                          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                           
+                                <%= link_to post_path(post) do %>
+                                  <% if post.images.empty? %>
+                                     <%= image_tag "No_Image_Available_20.jpg", class: "thumbnail" %>
+                                  <% else %>
+                                    <%= image_tag post.images.first.url, class: "thumbnail" %>
+                                  <% end %>
+                                <% end %>
+        
+                           </div>
 
-  <table class="table table-hover table-condensed">
-    <thead>
-      <tr>
-        <th class="center">Preview</th>
-        <th class="center" width="45%">Heading</th>
-        <th class="center">Price</th>
-        <th class="center">State</th>
-        <th class="center">Last Updated</th>
-      </tr>
-    </thead>
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        <div class="clearfix">
+                            <div class="pull-left">
+                                <h2><%= number_to_currency(post.price, precision: 0) %></h2>
+                            </div>
+                            <div class="pull-right">
+                                <h5><%= link_to post.heading, post %></h5>
+                            </div>
+                        </div>
+                        <div>
+                            <h3><span class="fa fa-map-marker icon"></span> <%= post.state %></h3>
+                            <h5>Last Updated: <%= "#{time_ago_in_words(Time.at(post.timestamp.to_i))} ago" %></h5>
+                         
+                          </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      <% end %>     
+     
+     </div>
+</div>
 
-    <tbody>
-      <% @posts.each do |post| %>
-        <tr>
-          <td width="13%" height="120px">
-            <%= link_to post_path(post) do %>
-              <% if post.images.empty? %>
-                <%= image_tag "No_Image_Available_20.jpg", class: "thumbnail" %>
-              <% else %>
-                <%= image_tag post.images.first.url, class: "thumbnail" %>
-              <% end %>
-            <% end %>
-          </td>
-
-          <td style="vertical-align:middle"><%= link_to post.heading, post %></td>
-          <td class="center" style="vertical-align:middle"><%= number_to_currency(post.price, precision: 0) %></td>
-          <td class="center" style="vertical-align:middle"><%= post.state %></td>
-          <td class="center" style="vertical-align:middle"><%= "#{time_ago_in_words(Time.at(post.timestamp.to_i))} ago" %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  
 
   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 
