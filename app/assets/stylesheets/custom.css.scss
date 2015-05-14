@@ -44,9 +44,6 @@ body {
 
 }
 
-  .table-hover tbody tr:hover {
-    background-color: #eaeae2;
-  }
 
   tbody {
     .thumbnail {
@@ -151,7 +148,6 @@ footer {
 }
 
 
-
 img {
     max-width: 110%;
     height: auto;      
@@ -161,16 +157,14 @@ img {
     clear:both;
 }
 
-.rowcolor {
-    background-color:#CCCCCC;
-}
+
 
 .padall {
     padding:10px;
 }
 
 .icon {
-    font-size:23px;
+    font-size:17px;
     color:#197BB5;
 }
 

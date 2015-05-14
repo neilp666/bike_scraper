@@ -12,7 +12,7 @@
           <tbody>
             <% @posts.each do |post| %>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
-                  <div class="panel panel-default">
+                  <div class="panel panel-primary">
                       <div class="row padall">
                           <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                            
@@ -30,13 +30,14 @@
                         <div class="clearfix">
                             <div class="pull-left">
                                 <h2><%= number_to_currency(post.price, precision: 0) %></h2>
+                                <h5><%= link_to post.heading, post %></h5>
                             </div>
                             <div class="pull-right">
-                                <h5><%= link_to post.heading, post %></h5>
+                               
                             </div>
                         </div>
                         <div>
-                            <h3><span class="fa fa-map-marker icon"></span> <%= post.state %></h3>
+                            <h4><span class="fa fa-map-marker icon"></span> <%= post.state %></h4>
                             <h5>Last Updated: <%= "#{time_ago_in_words(Time.at(post.timestamp.to_i))} ago" %></h5>
                          
                           </span>

@@ -7,6 +7,8 @@
           State <%= select_tag(:state, options_from_collection_for_select(Location.all, :name, :name, params[:state]), { include_blank: true , class: "form-control"}) %></h2><br>
       
         <%= submit_tag "Meet Your Bike", name: nil, class: "btn btn-danger btn-lg btn-block" %>
+
+     
         <br>
     
     <% end %>
