@@ -90,11 +90,11 @@ img {
 /* Responsive Styling */
 
 
-@media (max-width: 320px) { 
+@media (max-width: 345px) { 
 
 
   h1 {
-    font-size: 46px;
+    font-size: 26px;
     font-family: 'Pacifico', arial;
     text-transform: uppercase;
     font-color: #000000; 
@@ -107,7 +107,7 @@ img {
   }
 
   .box {
-    width: 610px;
+    width: 310px;
     margin: 100px auto;
     padding: 10px;
     text-align: center;
