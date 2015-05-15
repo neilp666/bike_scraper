@@ -4,6 +4,10 @@
 @import "bootstrap";
 
 
+body {
+  background-color: #F5F5F1;
+  }
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -24,7 +28,7 @@
   }
 
   .box {
-    width: 570px;
+    width: 610px;
     margin: 100px auto;
     padding: 20px;
     text-align: center;
@@ -83,3 +87,83 @@ img {
     color:#197BB5;
 }
 
+/* Responsive Styling */
+
+
+@media (max-width: 414px) { 
+
+
+  h1 {
+    font-size: 46px;
+    font-family: 'Pacifico', arial;
+    text-transform: uppercase;
+    font-color: #000000; 
+  }
+
+  p {
+    font-family: 'Helvetica Neue', Helvetica;
+    font-size: 44px;
+    font-color: #000000;
+  }
+
+  .box {
+    width: 310px;
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+
+  
+  }
+
+@media (max-width: 640px) { 
+
+  h1 {
+    font-size: 36px;
+    font-family: 'Pacifico', arial;
+    text-transform: uppercase;
+    font-color: #000000; 
+  }
+
+  p {
+
+    font-family: 'Helvetica Neue', Helvetica;
+    font-size: 20px;
+    font-color: #000000;
+  }
+
+  .box {
+    width: 410px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  
+  }
+
+@media (max-width: 768px) { 
+
+h1 {
+    font-size: 46px;
+    font-family: 'Pacifico', arial;
+    text-transform: uppercase;
+    font-color: #000000; 
+  }
+
+  p {
+
+    font-family: 'Helvetica Neue', Helvetica;
+    font-size: 25px;
+    font-color: #000000;
+  }
+
+  .box {
+    width: 610px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+}
