@@ -90,7 +90,7 @@ img {
 /* Responsive Styling */
 
 
-@media (max-width: 414px) { 
+@media (max-width: 320px) { 
 
 
   h1 {
@@ -102,13 +102,13 @@ img {
 
   p {
     font-family: 'Helvetica Neue', Helvetica;
-    font-size: 44px;
+    font-size: 15px;
     font-color: #000000;
   }
 
   .box {
-    width: 310px;
-    margin: 50px auto;
+    width: 610px;
+    margin: 100px auto;
     padding: 10px;
     text-align: center;
   }
@@ -117,10 +117,10 @@ img {
   
   }
 
-@media (max-width: 640px) { 
+@media (max-width: 414px) { 
 
   h1 {
-    font-size: 36px;
+    font-size: 46px;
     font-family: 'Pacifico', arial;
     text-transform: uppercase;
     font-color: #000000; 
@@ -129,12 +129,12 @@ img {
   p {
 
     font-family: 'Helvetica Neue', Helvetica;
-    font-size: 20px;
+    font-size: 15px;
     font-color: #000000;
   }
 
   .box {
-    width: 410px;
+    width: 610px;
     margin: 100px auto;
     padding: 20px;
     text-align: center;
