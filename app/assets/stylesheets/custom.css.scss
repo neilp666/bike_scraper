@@ -3,48 +3,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-  background-color: #F5F5F1;
-  }
-
-.center {
-  text-align: center;
-}
-
-.jumbotron {
- 
-  background-image: url('https://dl.dropboxusercontent.com/s/8nappil0qbbgnq8/bike.jpg');
-  height: 900px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: repeat-x;
- 
-  
   h1 {
+
+    font-size: 56px;
     font-family: 'Pacifico', arial;
     text-transform: uppercase;
-    color: yellow;
-    text-shadow: 0px 2px 3px #555;
-  }
-
-  h2 {
-    font-family: 'Helvetica Neue', Helvetica;
-    color: yellow;
-    font-weight: 80;
-
+    color: #000000;
+   
   }
 
   p {
 
     font-family: 'Helvetica Neue', Helvetica;
-    font-size: 27px;
-    color: #fff;
+    font-size: 20px;
+    color: #000000;
 
   }
 
-}
+  .box {
 
+    width: 570px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+
+  }
 
   tbody {
     .thumbnail {
@@ -54,16 +37,7 @@ body {
     }
   }
 
-  .box {
-  width: 700px;
-  margin: 50px auto;
-  padding: 20px;
-  background: black;
-  background-color: rgba(0,0,0,0.7);
-  text-align: center;
-  border-radius: 30px;
-
-  }
+  
 
   .basic-info, .description {
 
@@ -88,7 +62,7 @@ body {
   }
 
 footer {
-   background-color: #F5F5F1;
+ 
   }
 
 
@@ -96,23 +70,18 @@ footer {
 
 @media (max-width: 424px) { 
 
-  .jumbotron h1 {
+ h1 {
     font-size: 45px;
   }
 
-  .jumbotron h2 {
-    font-size: 20px
-  }
-.jumbotron p {
+p {
     font-size: 23px
   }
 
   .box {
-  width: 350px;
-  margin: 50px auto;
+  width: 570px;
+  margin: 100px auto;
   padding: 20px;
-  background: black;
-  background-color: rgba(0,0,0,0.7);
   text-align: center;
   border-radius: 30px;
 
