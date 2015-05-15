@@ -3,6 +3,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
+body {
+  background-color: #F5F5F1;
+  }
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
   h1 {
 
     font-size: 56px;
@@ -59,10 +70,6 @@
 
   .header {
     border-bottom: 2px dotted #e3e3e3;
-  }
-
-footer {
- 
   }
 
 
