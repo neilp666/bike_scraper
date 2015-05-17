@@ -22,7 +22,7 @@
 
   <div class="col-md-5">
     <div class="basic-info">
-      <h4>Basic Info</h4>
+      <h4>General Info</h4>
         Price: <%= number_to_currency(@post.price, precision: 0) %><br>
         Last Updated: <%= "#{time_ago_in_words(Time.at(@post.timestamp.to_i))} ago" %><br>
         
