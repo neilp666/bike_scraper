@@ -1,5 +1,5 @@
 
-@import url(//fonts.googleapis.com/css?family=Pacifico);
+@import url(//fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -15,15 +15,17 @@ body {
 }
 
   h1 {
-    font-size: 58px;
+    font-size: 4em;
+    font-weight: 400;
     font-family: 'Pacifico', arial;
-    font-color: #000000; 
+    font-color: #000; 
   }
 
   p {
-    font-family: 'Helvetica Neue', Helvetica;
+    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
-    font-color: #000000;
+    font-weight: 300;
+    font-color: #000;
   }
 
 
