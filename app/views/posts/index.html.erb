@@ -1,4 +1,43 @@
-<h5 class="navbar-text navbar-right"><%= link_to "About" , about_path %></h5>
+  <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation"> 
+      <ul class="nav navmenu-nav">
+         
+      <div class="page-header">
+      <h3>Bikes List</h3>    
+      
+
+      <p>Bikes list provides the <b>easiest</b> way to find the bike that you always wanted.</p>
+  
+
+        <h3>What it does</h3>
+
+        <p>It gives you a wide range of bikes for sale in the USA namely, BMX bikes, road bike, folding bikes, mountain bike, and electric bikes. All of the bikes are either brand new, vintage or recently been used.</p>
+  
+
+        <h3>How it works</h3>
+
+        <p>Enter the range of maximum and the minimum price of bikes that fall within your budget.Select the state that you want or you could just enter the state manually without entering the price.</p>
+
+        <h3>Meet Your Bike!</h3>
+
+        <p>This will provide a list of bikes available in each specific state you entered. More simply, you could just hit Meet Your Bike button. It’s intuitive and simple. You will be provided with a long list of bikes available in the United States.</p>
+
+
+
+
+        <h3>Follow</h3>
+
+    <br />
+   
+        <a class="fa fa-twitter social-icon" href="http://twitter.com/NeilP666" target="_blank"></a>
+        <a class="fa fa-external-link social-icon" href="http://www.neilpatel.co" target="_blank"></a>
+
+</div>
+      </ul>
+</nav>
+
+  <button type="button" class="navbar-toggle button-nav" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+  <i class="fa fa-info"></i>
+   </button>
 <div class="container">
   <%= render 'filter' %>
   <br>
