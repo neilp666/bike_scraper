@@ -1,5 +1,7 @@
 
 @import url(//fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
+@import url(//fonts.googleapis.com/css?family=Varela+Round);
+@import url(//fonts.googleapis.com/css?family=Raleway:400,200,600,700,800,500,300,100);
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "jasny-bootstrap";
@@ -23,9 +25,9 @@ body {
   }
 
   p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
-    font-weight: 300;
+  
     color: #000;
   }
 
@@ -122,78 +124,17 @@ img {
 
 
 
-
 // NAVBAR
 
-.myclass a {
-  color: #cccccc !important;
-}
-.myclass a:hover {
-  color: #fc735d !important;
-}
-
 .navmenu-default, .navbar-default .navbar-offcanvas {
-  background-color: #282828;
+ 
+
+  p {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+  }
 }
 
-.navmenu-nav li.active a i {
-  border: 2px solid $brand-primary;
-  border-radius: 100%;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  color: white;
-  line-height: 36px;
-  margin-right: 5px;
-  font-size: 16px;
-  color: $brand-primary;
-}
-
-.navmenu-nav li.active a {
-  color: $brand-primary !important;
-  background-color: transparent !important;
-}
-
-.navmenu-nav li.active2 a i {
-  border: 2px solid $brand-primary;
-  border-radius: 100%;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  color: white;
-  line-height: 36px;
-  margin-right: 5px;
-  font-size: 16px;
-  color: $brand-primary;
-}
-
-.navmenu-nav li.active2 a {
-  color: $brand-primary !important;
-  background-color: transparent !important;
-}
-
-
-.navmenu-nav li a i {
-  border: 2px solid white;
-  border-radius: 100%;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  color: white;
-  line-height: 36px;
-  margin-right: 5px;
-  font-size: 16px;
-}
-
-.navmenu-nav li a {
-  color: white !important;
-}
-
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: initial;
-  color: $brand-primary;
-  transition: all 0.3s ease-out;
-}
 
 .navbar-toggle {
   display: block;
@@ -201,34 +142,9 @@ img {
   border: none;
 }
 
-.navbar-brand
-{
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  text-align: center;
-  margin: auto;
-  float: initial;
-  padding: 0;
-  line-height: 0px;
-  height: 0px;
-  z-index: 5;
-}
-
-.navbar-brand > img {
-  height: 36px;
-  margin-top: 17px;
-  display: inline-block;
-}
-
 .button-nav {
-  font-size: 36px;
+  font-size: 30px;
   color: #cccccc;
-  margin: 4px;
-}
-
-.navbar-default {
-  background-color: white;
+  margin: 2px;
 }
 
