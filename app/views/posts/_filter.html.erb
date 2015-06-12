@@ -1,14 +1,13 @@
 
     <%= form_tag posts_path, method: :get, class: "form-inline" do %>
          
-          <p>Price <%= text_field_tag :min_price, params[:min_price], placeholder: "Minimum $", class: "form-control" %>  
-          <%= text_field_tag :max_price, params[:max_price], placeholder: "Maximum $", class: "form-control" %> 
+          <p>Price <%= text_field_tag :min_price, params[:min_price], placeholder: "Max Price $", class: "form-control" %>  
+          <%= text_field_tag :max_price, params[:max_price], placeholder: "Min Price $", class: "form-control" %> 
   
           State <%= select_tag(:state, options_from_collection_for_select(Location.all, :name, :name, params[:state]), { include_blank: true , class: "form-control"}) %></p><br>
       
-        <%= submit_tag "Meet Your Bike", name: nil, class: "btn btn-danger btn-lg" %>
+        <%= submit_tag "Meet Your Bike", name: nil, class: "btn btn-success btn-lg" %>
 
-     
         <br>
     
     <% end %>
